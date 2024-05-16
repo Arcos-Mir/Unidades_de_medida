@@ -1,0 +1,50 @@
+/*los pixeles se consideran como unidad relativa
+
+Unidades Relativas:
+px - pixel
+em - Relativa al tamaño de fuente que tenga su elemento padre o el mas cercano
+rem - Relativa al tamaño de fuente especificado en el body(tamaño del body)
+% - porcentaje
+
+Unidades Absolutas
+Estas medidas nunca las vas a usqr en el diseño web pero aqui estan para que las conozcas
+in - inches (pulgadas)
+cm - centimetros
+mm - milimetros*/
+
+body {
+    font-size: 20px;
+}
+p {
+    /*font-size: 30px;*/
+    font-size: 1.5em; /*el "em" toma el valor o tamaño del font-size del elemEnto padre
+    o el mas cercano por ejemplo el body : 20px seria igual a 1em si se quieren 30px se hace un 
+    calculo de 30 (tamaño requerido de fuente) / 20(tamaño de fuente del padre) = 1.5em */
+}
+
+/*div {
+    /*width:200px;
+    height: 200px; si se requiere trabajar con em se hace el calculo de 200/20= 10em
+    usar "em" nos ayuda para poder modificar posteriormente el tamaño de todo el documento
+    hacerlo mas pequeño o mas grande con solo cambiar la cantidad de pixeles en el body
+    ya  que es el elemento padre o mas cercano
+    width: 10em;
+    height: 10em;
+    background: black;
+}*/
+
+/*en este ejemplo el .hijo esta tomando la medida del .contenedor_padre
+no del body asi  que cambia el tamaño de la fuente pero tambien se afecta el tamaño 
+del .hijo osea cambia de tamaño el cuadro color negro se hace mas grande 
+si queremos que el .hijo o las letras del .contenedor_padre cambien de tamaño pero sin afectar el tamaño del 
+cuadro se coloca "rem" en width y height*/
+.contenedor_padre {
+    font-size: 30px;
+}
+
+.hijo {
+    width: 10rem;
+    height: 10rem;
+    background: black;
+    color: white;
+}
